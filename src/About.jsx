@@ -10,40 +10,41 @@ function About() {
       <Header navValue={navValue} />
       <h1>About</h1>
       <p>
-        Hello, my name is Onifade Titilope Chisom. I am currently studying at
-        Lagos State University, where I am pursuing a degree in Computer
-        Science. I have developed a strong foundation in programming languages
-        such as JavaScript and Python
-      </p>
-      <p>
-        In my previous work experience, I interned with HNG where I gained
-        practical experience in software development and project management. I
-        was responsible for writing code for various projects and collaborating
-        with a team to ensure that projects were completed on time and to the
-        highest quality.
-      </p>
-      <p>
-        I am very interested in pursuing a career in the technology industry and
-        am excited to continue learning and growing as a professional. I am a
-        proactive and detail-oriented individual, with excellent problem-solving
-        and communication skills. I am confident that my education, experience,
-        and skills make me well-suited for a career in the technology industry,
-        and I am eager to contribute to the success of a company.
+        Hello, my name is Onifade Titilope Chisom. I am a frontend developer
+        with strong experience building scalable, high-performance web
+        applications using modern JavaScript frameworks. I focus on creating
+        clean, maintainable interfaces that balance user experience,
+        performance, and business needs.
       </p>
 
-      <h1>Languages & tools</h1>
       <p>
-        Here are some of the tools and technologies I have worked with over the
-        past year; majorly or not (in no particular order):
+        I have contributed to production-grade applications across industries,
+        including aviation, fintech, and technology services. My work includes
+        building complex user and admin dashboards, implementing role-based
+        access, managing global state, and collaborating closely with backend
+        engineers and product teams to deliver reliable, user-centric solutions.
       </p>
+
+      <p>
+        I take ownership of features from concept to deployment and actively
+        contribute to technical decisions, code quality, and team collaboration.
+        I am driven by continuous improvement, enjoy mentoring through
+        collaboration, and thrive in environments that value thoughtful
+        engineering and impact.
+      </p>
+
+      <h1>Languages & Tools</h1>
+      <p>Technologies and tools I work with regularly:</p>
 
       <ul>
         <li>HTML</li>
         <li>CSS</li>
-        <li>Tailwind</li>
+        <li>Tailwind CSS</li>
         <li>JavaScript</li>
-        <li>React js</li>
-        <li>Next js</li>
+        <li>TypeScript</li>
+        <li>React.js</li>
+        <li>Next.js</li>
+        <li>Redux</li>
         <li>Git</li>
       </ul>
       <Footer navValue={navValue} />

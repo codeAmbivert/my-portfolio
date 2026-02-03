@@ -2,15 +2,51 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import useNav from "./useNav";
-import coverlyImg from "./img/coverly.png";
-import smapp from "./img/sm-app.png";
-import blackTrustImg from "./img/blacktrust.png";
 import swiftwingsImg from "./img/swiftwings.png";
-import juwsheyajImg from "./img/juwsheyaj.png";
-import cuttLive from "./img/cutt-live.png";
+import capitalwiseImg from "./img/capitalwise.png";
+import trygruppImg from "./img/trygrupp.png";
+import phliptechImg from "./img/phliptech.png";
+import secondwalletImg from "./img/secondwallet.png";
 
 function Projects() {
   const { navValue } = useNav(true);
+  const projects = [
+    {
+      name: "Swiftwingsjet",
+      about: "A website for private jets hire.",
+      image: swiftwingsImg,
+      link: "https://www.swiftwingsjet.com/",
+      github: "https://github.com/codeAmbivert",
+    },
+    {
+      name: "Capitalwise",
+      about: "A loan management web app.",
+      image: capitalwiseImg,
+      link: "https://www.capitalwise.com/",
+      github: "https://github.com/codeAmbivert",
+    },
+    {
+      name: "Trygrupp",
+      about: "A Banking as a service platform.",
+      image: trygruppImg,
+      link: "https://www.trygrupp.com/",
+      github: "https://github.com/codeAmbivert",
+    },
+    {
+      name: "Phliptech",
+      about: "A tech solutions provider.",
+      image: phliptechImg,
+      link: "https://www.phliptech.com/",
+      github: "https://github.com/codeAmbivert",
+    },
+    {
+      name: "SecondWallet",
+      about: "Internal loan management system.",
+      image: secondwalletImg,
+      link: "https://www.secondwallet.ng/",
+      github: "https://github.com/codeAmbivert",
+    },
+  ];
   return (
     <div className="Projects">
       <Header navValue={navValue} />
@@ -20,170 +56,34 @@ function Projects() {
           These are projects I've worked on or contributed to.
         </p>
         <div className="projects__container">
-          <div className="projects__cardWrapper">
-            <div>
-              <h1>Swiftwingsjet</h1>
-              <p>A website for private jets hire.</p>
-            </div>
-            <a
-              href="https://www.swiftwingsjet.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={swiftwingsImg} alt="openAI-ask cover img" />
-            </a>
-            <div>
-              <div className="projects__active">ACTIVE</div>
-              <div className="projects__buttons">
-                <a
-                  href="https://www.swiftwingsjet.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  id="project__website"
-                >
-                  Website
-                </a>
+          {projects.map((project, index) => (
+            <div key={index} className="projects__cardWrapper">
+              <div>
+                <h1>{project.name}</h1>
+                <p>{project.about}</p>
+              </div>
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <img src={project.image} alt={`${project.name} cover img`} />
+              </a>
+              <div>
+                <div className="projects__active">ACTIVE</div>
+                <div className="projects__buttons">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    id="project__website"
+                  >
+                    Website
+                  </a>
 
-                <a
-                  href="https://github.com/codeAmbivert/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    Github
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="projects__cardWrapper">
-            <div>
-              <h1>Cutt.live</h1>
-              <p>A URL shortener with QR Codes for users</p>
-            </div>
-            <a href="https://cutt.live" target="_blank" rel="noreferrer">
-              <img src={cuttLive} alt="blackTrust" />
-            </a>
-            <div>
-              <div className="projects__active">ACTIVE</div>
-              <div className="projects__buttons">
-                <a
-                  href="https://cutt.live"
-                  target="_blank"
-                  rel="noreferrer"
-                  id="project__website"
-                >
-                  Website
-                </a>
-
-                <a
-                  href="https://github.com/codeAmbivert/scissor"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="projects__cardWrapper">
-            <div>
-              <h1>Juwsheyaj Residence</h1>
-              <p>A modern hotel website designed for booking rooms</p>
-            </div>
-
-            <a
-              href="https://www.juwsheyaj.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={juwsheyajImg} alt="juwsheyaj" />
-            </a>
-            <div>
-              <div className="projects__active">ACTIVE</div>
-              <div className="projects__buttons">
-                <a
-                  href="https://www.juwsheyaj.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  id="project__website"
-                >
-                  Website
-                </a>
-
-                <a
-                  href="https://github.com/codeAmbivert/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="projects__cardWrapper">
-            <div>
-              <h1>Social media app</h1>
-              <p>A social app where users can meet and communicate....</p>
-            </div>
-            <a
-              href="https://smedia.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={smapp} alt="social media app img" />
-            </a>
-            <div>
-              <div className="projects__active">ACTIVE</div>
-              <div className="projects__buttons">
-                <a
-                  href="https://smedia.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  id="project__website"
-                >
-                  Website
-                </a>
-
-                <a
-                  href="https://github.com/codeAmbivert/social-media-app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* <div className="projects__cardWrapper">
-            <div>
-              <h1>Coverly</h1>
-              <p>A web app that help users generate cover letters using AI</p>
-            </div>
-            <a href="https://coverly.app" target="_blank" rel="noreferrer">
-              <img src={coverlyImg} alt="coverlyImage" />
-            </a>
-            <div>
-              <div className="projects__active">ACTIVE</div>
-              <div className="projects__buttons">
-                <a
-                  href="https://coverly.app"
-                  target="_blank"
-                  rel="noreferrer"
-                  id="project__website"
-                >
-                  Website
-                </a>
-
-                <a
-                  href="https://github.com/codeAmbivert/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
-              </div>
-            </div>
-          </div> */}
+          ))}
         </div>
       </div>
       <Footer navValue={navValue} />

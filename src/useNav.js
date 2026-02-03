@@ -6,7 +6,7 @@ const useNav = (value) => {
 
   useEffect(() => {
     setNavValue(value);
-  }, []);
+  }, [value]);
 
   return { navValue };
 };
